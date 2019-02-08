@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       
+        <script>
+            function validateForm()
+            {
+                var firstname = document.forms["myForm"]["name"];
+                 var lastname = document.forms["myForm"]["name2"];
+                  var email = document.forms["myForm"]["email"];
+                   var password = document.forms["myForm"]["psw"];
+                     var confirm password = document.forms["myForm"]["psw2"];
+                     
+                     if(firstname.value == "")
+                     {
+                         window.alert("please enter your firstname");
+                         firstname.focus();
+                         return false;
+                     }
+                      if(lasttname.value == "")
+                     {
+                         window.alert("please enter yourlasttname");
+                         lastname.focus();
+                         return false;
+                     }
+                      if(email.value == "")
+                     {
+                         window.alert("please enter your email");
+                         email.focus();
+                         return false;
+                     }
+                      if(password.value == "")
+                     {
+                         window.alert("please enter your password");
+                         password.focus();
+                         return false;
+                     }
+            }
+            </script>
+    </head>
+    
+    <body>
+
+    <div><form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <label for="firstname"><b>FIRST NAME:</b></label>
+    <input type="text" placeholder="Enter first name" name="name" required><br><br>
+      <br> <br> <br>
+    <label for="lastname"><b>LAST NAME:</b></label>
+    <input type="text" placeholder="Enter last name" name="name2" required><br><br>
+     <br> <br> <br>
+    <label for="email"><b>EMAIL:</b></label>
+    <input type="text" placeholder="Enter email" name="email" required><br><br>
+     <br> <br> <br>
+    <label for="psw"><b>PASSWORD:</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+     <br> <br> <br>
+    <label for="psw-repeat"><b>CONFIRM PASSWORD:</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw2" required><br><br> <br> <br>
+ <input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
